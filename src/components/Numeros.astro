@@ -1,0 +1,38 @@
+---
+import { CountUp } from "./CountUp";
+---
+
+<section class="text-white max-w-6xl mx-auto p-20">
+    <h2 class="font-tomaso text-4xl sm:text-5xl lg:text-6xl mb-20 tracking-widest text-balance text-center">Los ESLAND en números</h2>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10">
+    
+    <div class="flex flex-col items-center">
+        
+        <span class="number text-7xl font-bold tabular-nums tracking-tighter mb-4"><CountUp client:visible initial={0} final={69.9} decimals={1} />M</span>
+        <small class="text-center uppercase">de visualizaciones</small>
+    </div>
+    
+    <div class="flex flex-col items-center">
+        <span class="number text-7xl font-bold tabular-nums tracking-tighter mb-4"><CountUp client:visible initial={0} final={227} /></span>
+        <small class="text-center uppercase">noticias en prensa</small>
+    </div>
+
+    <div class="flex flex-col items-center">
+    <span class="number text-7xl font-bold tabular-nums tracking-tighter mb-4"><CountUp client:visible initial={0} final={3.2} decimals={1}/>M€</span>
+           
+        <small class="text-center uppercase">en medios ganados</small>
+    </div>
+</div>    
+</section>
+
+<style>
+
+
+  .number {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 50px rgba(66, 220, 219, 0.3),
+      0 0 200px rgba(66, 220, 219, 0.1);
+  }
+</style>

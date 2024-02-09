@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+//componentes
+import HeroContainer from '../HeroContainer.astro';
+
+
+
+
+//Traducción
+import { getI18N } from '../../i18n'
+import Button from '../Button.astro';
+import Numeros from '../Numeros.astro';
+import Galeria from '../Galeria.astro';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+---
+
+<Layout 
+title="arhcivo"
+description="Archivo">
+	<HeroContainer 
+	img="/archivoHeader.webp"
+	>
+	<h1 class="text-white text-5xl uppercase text-center text-balance mb-20 font-tomaso tracking-widest">Ediciones anteriores</h1>
+	<Button class="animate-fade-up">
+		REVIVE LA ÚLTIMA GALA
+	</Button>
+	</HeroContainer>
+	<main>
+		<Numeros/>
+		<Galeria/>
+	</main>
+
+</Layout>

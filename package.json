@@ -1,0 +1,30 @@
+{
+  "name": "esland-web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/preact": "^3.1.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.3.0",
+    "@auth/core": "^0.18.6",
+    "@justinribeiro/lite-youtube": "^1.5.0",
+    "astro": "^4.2.3",
+    "auth-astro": "^4.1.1",
+    "photoswipe": "^5.4.3",
+    "preact": "^10.19.3",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "postcss-nesting": "^12.0.2",
+    "tailwindcss-animated": "^1.0.1"
+  }
+}

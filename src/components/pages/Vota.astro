@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+//componentes
+import Button from '../Button.astro';
+
+
+
+
+//Traducción
+import { getI18N } from '../../i18n'
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+---
+
+<Layout 
+title="vota"
+description="Vota">
+<section class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]">
+<img src="/bgvota.jpg" alt="ESLAND cover"
+class="absolute h-full w-full animate-fade object-cover object-center animate-duration-1000 -z-10"
+/>
+</section>
+<div class="mx-auto flex flex-col max-w-7xl pt-40">
+	<h1 class="text-white text-5xl uppercase text-center text-balance mb-20 font-tomaso tracking-widest">Ediciones anteriores</h1>
+	<Button />
+</div>
+
+</Layout>

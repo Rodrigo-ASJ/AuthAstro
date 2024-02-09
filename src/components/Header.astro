@@ -1,0 +1,28 @@
+---
+import Logo from "./Logo.astro"
+---
+<header id="header-nav" class="fixed w-screen py-3 z-50 top-0 px-8 lg:px-0">
+    <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
+        <a href="/" class="">
+            <Logo class="w-12 h-auto"/>
+        </a>
+        <nav class="justify-self-center">
+            <ul class="flex gap-4">
+                <li>
+                    <a class="hover:underline" href="/vota">VOTA</a>
+                </li>
+                <li>
+                   <a class="hover:underline" href="/info">INFO</a>
+                </li>
+                <li>
+                    <a class="hover:underline" href="/archivo">ARCHIVO</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#"
+            class="border rounded-full inline-block border-white px-4 py-2 justify-self-end hover:bg-white hover:text-black duration-300">
+            ESLAND:EL DOCUMENTAL
+        </a>
+        
+    </div>
+</header>

@@ -1,4 +1,4 @@
-import { useProgressiveNumber } from "@/hooks/useProgressiveNumbers";
+import { useProgressiveNumber } from "../hooks/useProgressiveNumbers";
 import { useEffect } from "preact/hooks";
 
 export const CountUp = (

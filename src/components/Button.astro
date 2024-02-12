@@ -1,43 +1,46 @@
 ---
+import type { SlotString } from 'astro/runtime/server/render/slot.js';
+
 interface Props {
-    url?: string;
-    class?: string;
+	url?: string;
+	class?: string;
+	id?: string;
 }
 
-const { url } = Astro.props;
+const { url, id } = Astro.props;
 ---
 
-<a 
-class={`
+<a class={
+	`
     ${Astro.props.class}
     uppercase border border-white rounded-full text-white px-10 py-4
     group hover:shadow-2xl shadow-white button
-    `}
-href={url}>
+    `
+}
+href={url}
+id={id} >
+<slot />
 
-    <slot/>
 
-</a>
 
 <style>
-.button {
-    transition:
-      text-shadow 0.5s ease-out,
-      box-shadow 0.3s ease-out;
-  }
+	.button {
+		transition:
+			text-shadow 0.5s ease-out,
+			box-shadow 0.3s ease-out;
+	}
 
-  .button:hover {
-    box-shadow: 0 0 16px #fff8;
-    text-shadow:
-      0 0 10px rgba(255, 255, 255, 0.8),
-      0 0 20px rgba(255, 255, 255, 0.8),
-      0 0 22px rgba(255, 255, 255, 0.8),
-      0 0 40px rgba(66, 220, 219, 0.8),
-      0 0 60px rgba(66, 220, 219, 0.8),
-      0 0 80px rgba(66, 220, 219, 0.5),
-      0 0 100px rgba(66, 220, 219, 0.5),
-      0 0 140px rgba(66, 220, 219, 0.5),
-      0 0 200px rgba(66, 220, 219, 0.5);
-  }
-
+	.button:hover {
+		box-shadow: 0 0 16px #fff8;
+		text-shadow:
+			0 0 10px rgba(255, 255, 255, 0.8),
+			0 0 20px rgba(255, 255, 255, 0.8),
+			0 0 22px rgba(255, 255, 255, 0.8),
+			0 0 40px rgba(66, 220, 219, 0.8),
+			0 0 60px rgba(66, 220, 219, 0.8),
+			0 0 80px rgba(66, 220, 219, 0.5),
+			0 0 100px rgba(66, 220, 219, 0.5),
+			0 0 140px rgba(66, 220, 219, 0.5),
+			0 0 200px rgba(66, 220, 219, 0.5);
+	}
 </style>
